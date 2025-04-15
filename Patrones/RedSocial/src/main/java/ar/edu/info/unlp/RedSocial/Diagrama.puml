@@ -1,0 +1,31 @@
+@startuml
+
+class Twitter {
+    + AgregarUsuario(screenName : String): void
+    + EliminarUsuario(usuario : Usuario): void
+}
+
+class Usuario {
+    - screenName: String
+    + Tweetear(texto : String): void
+    + ReTweetear(tweet : Tweet): void
+}
+
+interface Component {
+}
+
+
+class Tweet {
+    - text : String
+}
+
+class ReTweet {
+}
+
+Twitter "1"-->"0..*" Usuario : usuarios
+Usuario "1"-->"0..*" Component : tweets
+Tweet --|> Component
+ReTweet --|> Component
+Component --* ReTweet
+
+@enduml

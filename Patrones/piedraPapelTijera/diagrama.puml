@@ -1,0 +1,13 @@
+@startuml
+
+class Juego {
+    + jugar(): String
+}
+
+interface jugada {
+    + jugar(): void
+}
+
+
+
+@enduml
