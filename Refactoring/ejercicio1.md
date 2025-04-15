@@ -71,15 +71,9 @@ public void imprimirValores() {
 
 - Resolucion:
 
-*Bad Smell*: Long Method
-
-*Refactoring*: Move Method
-
-*Bad Smell*: Reinventa la rueda
-
-*Refactoring*:
-
-*Bad Smell*: 
+**Long Method -> Extract Method, Replace temp with query**
+**Reinventa la rueda -> Replace loop with pipeline**
+**Primitive obsession -> Replace algorithm with library function**
 
 ```java
 
